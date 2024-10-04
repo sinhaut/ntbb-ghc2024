@@ -60,7 +60,7 @@ class TestModule3(unittest.TestCase):
   """
   def test_calculate_transaction_pnl_handle_case_sensitivity(self):
     # given
-    current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': 'SELL'} }
+    current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': 'sell'} }
     previous_portfolio = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2800.0} }
     sell_action_calc = 5 * (2750.0 - 2800.0)
     expected_pnl = { 'BOP': -250.0} # answer from sell_action_calc
@@ -76,7 +76,7 @@ class TestModule3(unittest.TestCase):
   """
   def test_calculate_transaction_pnl_handle_empty_string(self):
     # given
-    current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': 'SELL'} }
+    current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': ''} }
     previous_portfolio = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2800.0} }
     sell_action_calc = 5 * (2750.0 - 2800.0)
     expected_pnl = { 'BOP': -250.0} # answer from sell_action_calc
