@@ -43,6 +43,7 @@ class TestModule3(unittest.TestCase):
   Example Unit Test - Do not change this
   """
   def test_calculate_transaction_pnl_with_sell_action(self):
+    print("Testing Transactions PNL Calculation with 'SELL'")
     # given
     current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': 'SELL'} }
     previous_portfolio = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2800.0} }
@@ -52,6 +53,7 @@ class TestModule3(unittest.TestCase):
     pnl = calculate_transaction_pnl(current_transactions, previous_portfolio)
     # then
     assert pnl == expected_pnl
+    print("Passed Unit Test 1")
 
   """
   Unit Test 2 - Test Transactions PNL - handle input case sensitivity
@@ -59,6 +61,7 @@ class TestModule3(unittest.TestCase):
   If test fails, update calculate_transaction_pnl function to fix the test
   """
   def test_calculate_transaction_pnl_handle_case_sensitivity(self):
+    print("Testing Transactions PNL Calculation with 'sell'")
     # given
     current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': 'sell'} }
     previous_portfolio = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2800.0} }
@@ -68,6 +71,8 @@ class TestModule3(unittest.TestCase):
     pnl = calculate_transaction_pnl(current_transactions, previous_portfolio)
     # then
     assert pnl == expected_pnl
+    print("Passed Unit Test 2")
+    
 
   """
   Unit Test 3 - Test Transactions PNL - handle empty string input
@@ -75,6 +80,7 @@ class TestModule3(unittest.TestCase):
   If test fails, update calculate_transaction_pnl function to fix the test
   """
   def test_calculate_transaction_pnl_handle_empty_string(self):
+    print("Testing Transactions PNL Calculation with ''")
     # given
     current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': ''} }
     previous_portfolio = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2800.0} }
@@ -84,6 +90,7 @@ class TestModule3(unittest.TestCase):
     pnl = calculate_transaction_pnl(current_transactions, previous_portfolio)
     # then
     assert pnl == expected_pnl
+    print("Passed Unit Test 3")
 
 
 if __name__ == '__main__':
