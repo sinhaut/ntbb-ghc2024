@@ -23,9 +23,9 @@ Add a calculation for transaction_pnl and total_pnl using the function below:
 You can find the transactions files in the data folder to extract transaction_price and transaction
 """
 
-CURRENT_HOLDINGS_FILENAME = 'data/holdings_current_eod_positions.csv'
-PREVIOUS_HOLDINGS_FILENAME = 'data/holdings_previous_eod_positions.csv'
-TRANSACTIONS_FILENAME = 'data/transactions.csv'
+CURRENT_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_current_eod_positions.csv'
+PREVIOUS_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_previous_eod_positions.csv'
+TRANSACTIONS_FILENAME = '/content/ntbb-ghc2024/data_files/transactions.csv'
 
 ROUNDING_DECIMAL = 2 # keep any reusable constants at the top
 
@@ -73,6 +73,11 @@ def run_report(client_name):
     print(str_fmt.format('Security','PNL'))
     for security, gain_loss in holdings_pnl.items():
         print(str_fmt.format(security, round(gain_loss, ROUNDING_DECIMAL)))
+
+    # Hint: Add code to handle various clients. Pseudocode provided below: 
+    # if client_name == 'Client_A': print holdings_pnl
+    # if client_name == 'Client_B': print transactions_pnl
+    # if client_name == 'Client_C': print total_pnl
 
 # DO NOT EDIT THE MAIN FUNCTION BELOW
 if __name__ == "__main__":
