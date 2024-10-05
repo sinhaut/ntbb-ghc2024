@@ -26,8 +26,8 @@ holdings_pnl = holding_quantity * (current_eod_price - previous_eod_price)
 # TO DO: Please review the function below and replace all the improper variable names with better names. #
 ##########################################################################################################
 
-CURRENT_HOLDINGS_FILENAME = 'data/holdings_current_eod_positions.csv'
-PREVIOUS_HOLDINGS_FILENAME = 'data/holdings_previous_eod_positions.csv'
+CURRENT_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_current_eod_positions.csv'
+PREVIOUS_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_previous_eod_positions.csv'
 
 def run_report():
     # Read position data from current and previous holdings files in corresponding dictionaries
