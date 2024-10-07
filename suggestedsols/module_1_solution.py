@@ -4,8 +4,8 @@ import sys
 """
 Suggested solutions for module_1.py
 """
-CURRENT_HOLDINGS_FILENAME = 'bloomberg/pnl_calc/data/holdings_current_eod_positions.csv'
-PREVIOUS_HOLDINGS_FILENAME = 'bloomberg/pnl_calc/data/holdings_previous_eod_positions.csv'
+CURRENT_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_current_eod_positions.csv'
+PREVIOUS_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_previous_eod_positions.csv'
 ROUNDING_DECIMAL = 2 # keep any reusable constants at the top
 
 def run_report():

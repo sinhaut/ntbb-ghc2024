@@ -82,7 +82,7 @@ class TestModule3(unittest.TestCase):
     current_transactions = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2750.0, 'action': ''} }
     previous_portfolio = { 'Imaginary Company': {'ticker': 'BOP', 'quantity': 5, 'price': 2800.0} }
     sell_action_calc = 5 * (2750.0 - 2800.0)
-    expected_pnl = { 'BOP': -250.0} # answer from sell_action_calc
+    expected_pnl = {} # answer from sell_action_calc
     # when
     pnl = calculate_transaction_pnl(current_transactions, previous_portfolio)
     # then

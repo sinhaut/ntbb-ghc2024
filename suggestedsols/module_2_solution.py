@@ -2,9 +2,9 @@ import csv
 import sys
 
 ## Important filenames and constants
-CURRENT_HOLDINGS_FILENAME = 'bloomberg/pnl_calc/data/holdings_current_eod_positions.csv'
-PREVIOUS_HOLDINGS_FILENAME = 'bloomberg/pnl_calc/data/holdings_previous_eod_positions.csv'
-TRANSACTIONS_FILENAME = 'bloomberg/pnl_calc/data/transactions.csv'
+CURRENT_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_current_eod_positions.csv'
+PREVIOUS_HOLDINGS_FILENAME = '/content/ntbb-ghc2024/data_files/holdings_previous_eod_positions.csv'
+TRANSACTIONS_FILENAME = '/content/ntbb-ghc2024/data_files/transactions.csv'
 ROUNDING_DECIMAL = 2
 
 """
